@@ -3,6 +3,7 @@
     "target": "ES5",
     "module": "CommonJS",
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "isolatedModules": false
   }
 }

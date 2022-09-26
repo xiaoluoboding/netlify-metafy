@@ -1,4 +1,4 @@
-import { Handler } from "@netlify/functions"
+import { Handler, HandlerEvent } from "@netlify/functions"
 import got from "got"
 
 const metascraper = require("metascraper")([
@@ -23,8 +23,9 @@ const scrapeMetaData = async (
   return metadata
 }
 
-const handler: Handler = async (event, context) => {
+const handler: Handler = async (event: HandlerEvent, context) => {
   console.log(event)
+  console.log(event.queryStringParameters)
   console.log(context)
   // const url = event.query.url as string
 
@@ -47,9 +48,17 @@ const handler: Handler = async (event, context) => {
   return {
     statusCode: 200,
     headers: {
+      /* Required for CORS support to work */
+      "Access-Control-Allow-Origin": "*",
+      /* Required for cookies, authorization headers with HTTPS */
+      "Access-Control-Allow-Credentials": true,
+      /* Return JSON result */
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(event),
+    body: JSON.stringify({
+      message: "Hi ⊂◉‿◉つ",
+      event: event,
+    }),
   }
 }
 
