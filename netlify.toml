@@ -1,14 +1,14 @@
 # example netlify.toml
 [build]
-  command = "yarn build"
-  functions = "dist"
+  command = "# no build command"
+  functions = "netlify/functions"
 
 [functions]
   node_bundler = "esbuild" 
 
 [[redirects]]
   from = "/"
-  to = "/.netlify/functions/index"
+  to = "/.netlify/functions/index-background"
   status = 200
 
   ## (optional) Settings for Netlify Dev
