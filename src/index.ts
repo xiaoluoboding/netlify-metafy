@@ -1,26 +1,27 @@
 import { Handler, HandlerEvent } from "@netlify/functions"
 import got from "got"
 
-const metascraper = require("metascraper")([
-  require("metascraper-audio")(),
-  require("metascraper-author")(),
-  require("metascraper-date")(),
-  require("metascraper-description")(),
-  require("metascraper-image")(),
-  require("metascraper-logo")(),
-  require("metascraper-logo-favicon")(),
-  require("metascraper-media-provider")(),
-  require("metascraper-title")(),
-  require("metascraper-video")(),
-  require("metascraper-clearbit")(),
-])
+// const metascraper = require("metascraper")([
+//   require("metascraper-audio")(),
+//   require("metascraper-author")(),
+//   require("metascraper-date")(),
+//   require("metascraper-description")(),
+//   require("metascraper-image")(),
+//   require("metascraper-logo")(),
+//   require("metascraper-logo-favicon")(),
+//   require("metascraper-media-provider")(),
+//   require("metascraper-title")(),
+//   require("metascraper-video")(),
+//   require("metascraper-clearbit")(),
+// ])
 
 const scrapeMetaData = async (
   targetUrl: string = "https://github.com/xiaoluoboding/metafy"
 ) => {
   const { body: html, url } = await got(targetUrl)
-  const metadata = await metascraper({ html, url })
-  return metadata
+  // const metadata = await metascraper({ html, url })
+  // return metadata
+  return html
 }
 
 const handler: Handler = async (event: HandlerEvent, context) => {

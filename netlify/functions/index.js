@@ -30,19 +30,6 @@ __export(src_exports, {
 });
 module.exports = __toCommonJS(src_exports);
 var import_got = __toESM(require("got"));
-var metascraper = require("metascraper")([
-  require("metascraper-audio")(),
-  require("metascraper-author")(),
-  require("metascraper-date")(),
-  require("metascraper-description")(),
-  require("metascraper-image")(),
-  require("metascraper-logo")(),
-  require("metascraper-logo-favicon")(),
-  require("metascraper-media-provider")(),
-  require("metascraper-title")(),
-  require("metascraper-video")(),
-  require("metascraper-clearbit")()
-]);
 var handler = async (event, context) => {
   console.log(event);
   console.log(event.queryStringParameters);
