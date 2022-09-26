@@ -30,20 +30,44 @@ __export(src_exports, {
 });
 module.exports = __toCommonJS(src_exports);
 var import_got = __toESM(require("got"));
-var handler = async (event, context) => {
-  console.log(event);
-  console.log(event.queryStringParameters);
-  console.log(context);
+var metascraper = require("metascraper")([
+  require("metascraper-author")(),
+  require("metascraper-description")(),
+  require("metascraper-image")(),
+  require("metascraper-logo")(),
+  require("metascraper-title")()
+]);
+var scrapeMetaData = async (targetUrl = "https://github.com/one-tab-group/netlify-metafy") => {
+  const { body: html, url } = await (0, import_got.default)(targetUrl);
+  const metadata = await metascraper({ html, url });
+  return metadata;
+};
+var headers = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Credentials": true,
+  "Content-Type": "application.json"
+};
+var handler = async (event) => {
+  var _a;
+  const url = (_a = event.queryStringParameters) == null ? void 0 : _a.url;
+  try {
+    require("url").parse(url);
+  } catch (err) {
+    return {
+      statusCode: 400,
+      headers,
+      body: JSON.stringify({
+        message: "Invalid URL"
+      })
+    };
+  }
+  const metadata = await scrapeMetaData(url);
   return {
     statusCode: 200,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Credentials": true,
-      "Content-Type": "application/json"
-    },
+    headers,
     body: JSON.stringify({
-      message: "Hi \u2282\u25C9\u203F\u25C9\u3064",
-      event
+      message: "Success",
+      data: metadata
     })
   };
 };
