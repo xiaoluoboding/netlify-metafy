@@ -23,18 +23,20 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// src/index.ts
-var src_exports = {};
-__export(src_exports, {
+// src/api.ts
+var api_exports = {};
+__export(api_exports, {
   handler: () => handler
 });
-module.exports = __toCommonJS(src_exports);
+module.exports = __toCommonJS(api_exports);
 var import_got = __toESM(require("got"));
 var metascraper = require("metascraper")([
   require("metascraper-author")(),
+  require("metascraper-clearbit")(),
   require("metascraper-description")(),
   require("metascraper-image")(),
   require("metascraper-logo")(),
+  require("metascraper-logo-favicon")(),
   require("metascraper-title")()
 ]);
 var scrapeMetaData = async (targetUrl = "https://github.com/one-tab-group/netlify-metafy") => {
@@ -65,10 +67,7 @@ var handler = async (event) => {
   return {
     statusCode: 200,
     headers,
-    body: JSON.stringify({
-      message: "Success",
-      data: metadata
-    })
+    body: JSON.stringify(metadata)
   };
 };
 // Annotate the CommonJS export names for ESM import in node:

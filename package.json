@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "esno dist/index.js",
-    "build": "tsup src/index.ts",
+    "start": "esno netlify/functions/api.js",
+    "build": "tsup src/api.ts --out-dir netlify/functions",
     "ts-check": "tsc --noEmit --lib ES2015 ./src/*.ts"
   },
   "repository": {
@@ -23,17 +23,13 @@
   "dependencies": {
     "got": "11.8.2",
     "metascraper": "^5.31.1",
-    "metascraper-audio": "^5.31.1",
     "metascraper-author": "^5.31.1",
     "metascraper-clearbit": "^5.31.1",
-    "metascraper-date": "^5.31.1",
     "metascraper-description": "^5.31.1",
     "metascraper-image": "^5.31.1",
     "metascraper-logo": "^5.31.1",
     "metascraper-logo-favicon": "^5.31.1",
-    "metascraper-media-provider": "^5.31.1",
-    "metascraper-title": "^5.31.1",
-    "metascraper-video": "^5.31.1"
+    "metascraper-title": "^5.31.1"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.19.1",
