@@ -1,0 +1,42 @@
+{
+  "name": "netlify-metafy",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "esno netlify/functions/metafy.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/one-tab-group/netlify-metafy.git"
+  },
+  "keywords": [
+    "meta"
+  ],
+  "author": "xiaoluoboding <xiaoluoboding@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/one-tab-group/netlify-metafy/issues"
+  },
+  "homepage": "https://github.com/one-tab-group/netlify-metafy#readme",
+  "dependencies": {
+    "got": "11.8.2",
+    "metascraper": "^5.31.1",
+    "metascraper-audio": "^5.31.1",
+    "metascraper-author": "^5.31.1",
+    "metascraper-clearbit": "^5.31.1",
+    "metascraper-date": "^5.31.1",
+    "metascraper-description": "^5.31.1",
+    "metascraper-image": "^5.31.1",
+    "metascraper-logo": "^5.31.1",
+    "metascraper-logo-favicon": "^5.31.1",
+    "metascraper-media-provider": "^5.31.1",
+    "metascraper-title": "^5.31.1",
+    "metascraper-video": "^5.31.1"
+  },
+  "devDependencies": {
+    "@netlify/functions": "^1.2.0",
+    "@types/node": "^18.7.21",
+    "esno": "^0.16.3",
+    "typescript": "^4.8.3"
+  }
+}
