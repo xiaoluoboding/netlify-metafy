@@ -1,7 +1,7 @@
 {
   "name": "netlify-metafy",
   "version": "1.0.0",
-  "description": "",
+  "description": "Easily scrape metadata from websites as a service.",
   "scripts": {
     "start": "esno netlify/functions/api.js",
     "build": "tsup src/api.ts --out-dir netlify/functions",
