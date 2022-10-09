@@ -48,7 +48,7 @@ Deploy your `Metafy` on your own instance with one-click.
 - [esno](https://github.com/antfu/esno) - TypeScript / ESNext node runtime powered by esbuild
 - [tsup](https://github.com/egoist/esno) - The simplest and fastest way to bundle your TypeScript libraries.
 
-## Simpler Project
+## Similar Project
 
 - [vercel-metafy](https://github.com/one-tab-group/metafy) - Easily scrape metadata from websites as a service with `Vercel`.
 
