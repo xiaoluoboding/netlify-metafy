@@ -17,19 +17,19 @@ curl https://get-metafy.netlify.app/.netlify/functions/api?url=$URL
 ### Input
 
 ```bash
-curl https://get-metafy.netlify.app/.netlify/functions/api?url=https://github.com/one-tab-group/netlify-metafy
+curl https://get-metafy.netlify.app/.netlify/functions/api?url=https://github.com/xiaoluoboding/netlify-metafy
 ```
 
 ### Output
 
 ```json
 {
-  "author": "one-tab-group",
+  "author": "xiaoluoboding",
   "logo": "https://logo.clearbit.com/github.com",
   "publisher": "GitHub",
-  "description": "Easily scrape metadata from websites as a service. - GitHub - one-tab-group/netlify-metafy: Easily scrape metadata from websites as a service.",
-  "image": "https://opengraph.githubassets.com/010acaa83e7292daf897869b2824afbc1128675c4cbbc3b404f71e2849562e71/one-tab-group/netlify-metafy",
-  "title": "GitHub - one-tab-group/netlify-metafy: Easily scrape metadata from websites as a service."
+  "description": "Easily scrape metadata from websites as a service. - GitHub - xiaoluoboding/netlify-metafy: Easily scrape metadata from websites as a service.",
+  "image": "https://opengraph.githubassets.com/010acaa83e7292daf897869b2824afbc1128675c4cbbc3b404f71e2849562e71/xiaoluoboding/netlify-metafy",
+  "title": "GitHub - xiaoluoboding/netlify-metafy: Easily scrape metadata from websites as a service."
 }
 ```
 
@@ -37,7 +37,7 @@ curl https://get-metafy.netlify.app/.netlify/functions/api?url=https://github.co
 
 Deploy your `Metafy` on your own instance with one-click.
 
-[![Deploy Metafy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/one-tab-group/netlify-metafy)
+[![Deploy Metafy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/xiaoluoboding/netlify-metafy)
 
 ## Tech Stack
 
@@ -50,8 +50,8 @@ Deploy your `Metafy` on your own instance with one-click.
 
 ## Similar Project
 
-- [vercel-metafy](https://github.com/one-tab-group/metafy) - Easily scrape metadata from websites as a service with `Vercel`.
+- [vercel-metafy](https://github.com/xiaoluoboding/vercel-metafy) - Easily scrape metadata from websites as a service with `Vercel`.
 
 ## License
 
-MIT [xiaoluoboding](https://github.com/xiaoluoboding)
+MIT [@xiaoluoboding](https://github.com/xiaoluoboding)
